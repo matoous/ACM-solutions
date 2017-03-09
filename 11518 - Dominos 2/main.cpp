@@ -11,24 +11,18 @@ vector<bool> fresh;
 
 void kick(int x){
     fresh[x] = false;
-    for(int i = 0; i < dominoes[x].size(); i++){
-        if(fresh[dominoes[x][i]])
-            kick(dominoes[x][i]);
-    }
+    for(int i = 0; i < dominoes[x].size(); i++) if(fresh[dominoes[x][i]]) kick(dominoes[x][i]);
 }
 
 int main(){
     int t, m, n, l, x, y;
     cin >> t;
-    while(t-->0){
-        cin >> n;
-        cin >> m;
-        cin >> l;
+    while(t-->0){ // love this
+        cin >> n >> m >> l;
         dominoes.resize(n,vector<int>(0));
         fresh.resize(n, true);
         for(int i = 0; i < m; i++) {
-            cin >> x;
-            cin >> y;
+            cin >> x >> y;
             dominoes[x-1].push_back(y-1);
         }
         for(int i = 0; i < l; i++){
