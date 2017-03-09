@@ -11,8 +11,7 @@ long outPut(vector<char> number){
     long result = 0;
     int position = 0;
     for(int i = number.size() - 1; i >= 0; i--){
-        result += (number[i]-48) * pow(9, position);
-        position++;
+        result += (number[i]-48) * pow(9, position++);
     }
     return result;
 }
