@@ -5,8 +5,7 @@ import math
 
 if __name__ == "__main__":
     for line in fileinput.input():
-        inline = line.strip()
-        sep = inline.split(" ")
+        sep = line.strip().split(" ")
         sw = float(sep[1])/10
         q = float(sep[3])*sw/100
         d = 0.0
@@ -14,11 +13,9 @@ if __name__ == "__main__":
             d = int(sep[6])
         else:
             d = int(sep[5])
-        d *= 2.54
-        d += q*2
-        all = math.pi * (d)
+        d = (2.54*d + 2*q)*math.pi
         sep.append(":")
-        sep.append(round(all))
+        sep.append(round(d))
         for i in range(len(sep)):
             if i == 0:
                 print(sep[i], end="")
