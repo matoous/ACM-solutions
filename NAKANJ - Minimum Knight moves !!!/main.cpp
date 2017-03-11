@@ -19,8 +19,7 @@ pair<char, char> changes[] = {
 };
 
 bool isOnBoard(pair<char, char> a){
-    if(a.first < 0 || a.first > 7 || a.second < 0 || a.second > 7) return false;
-    return true;
+    return (a.first < 0 || a.first > 7 || a.second < 0 || a.second > 7) ? false : true;
 }
 
 int DFS(pair<char, char> a, pair<char, char> ziel){
