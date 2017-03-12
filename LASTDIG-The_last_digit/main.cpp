@@ -12,10 +12,7 @@ int main() {
         int out;
         if(b == 0) cout << "1" << endl;
         else{
-            b = b%4;
-            if(b == 0){
-                b = 4;
-            }
+            b = (b%4 == 0) ? (4) : (b%4);
             out = a;
             for(int i = 1; i < b; i++){
                 out *= a;
