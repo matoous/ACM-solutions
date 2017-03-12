@@ -8,22 +8,14 @@ int *visited;
 short BFS(int x){
     visited[x] = 1;
     short visits = 0;
-    short boolean = 1;
     for(int i = 0; i < arr_count[x]; i++){
-        if(visited[arr[x][i]] == 1){
-            visits++;
-        }
-        if(visits == 2){
-            return 0;
-        }
+        if(visited[arr[x][i]] == 1) visits++;
+        if(visits == 2) return 0;
         if(visited[arr[x][i]] == 0){
-            boolean = BFS(arr[x][i]);
-        }
-        if(boolean == 0){
-            return 0;
+            if(!BFS(arr[x][i])) return 0;
         }
     }
-    return boolean;
+    return 1;
 }
 
 int main(int argc, char  *argv[]){
