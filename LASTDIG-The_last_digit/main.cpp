@@ -10,9 +10,8 @@ int main() {
         scanf("%d %d", &a, &b);
         a = a%10;
         int out;
-        if(b == 0){
-            cout << "1" << endl;
-        } else{
+        if(b == 0) cout << "1" << endl;
+        else{
             b = b%4;
             if(b == 0){
                 b = 4;
