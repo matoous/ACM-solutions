@@ -27,11 +27,8 @@ int main(){
             if(rx2 < x2) x2 = rx2;
             if(ry2 < y2) y2 = ry2;
         }
-        if(x1 > x2 || y1 > y2){
-            printf("Case %d: %d\n", t+1, 0);
-        } else{
-            printf("Case %d: %d\n", t+1, (x2 - x1)*(y2 - y1));
-        }
+        if(x1 > x2 || y1 > y2) printf("Case %d: %d\n", t+1, 0);
+        else printf("Case %d: %d\n", t+1, (x2 - x1)*(y2 - y1));
     }
     return 0;
 }
