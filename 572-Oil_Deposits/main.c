@@ -6,30 +6,14 @@ int m,n,pockets;
 
 void find(int x, int y){
     map[x][y] = '*';
-    if(x + 1 < m && map[x+1][y] == '@'){
-        find(x+1,y);
-    }
-    if(x + 1 < m && y + 1 < n && map[x+1][y+1] == '@'){
-        find(x+1,y+1);
-    }
-    if(y+1<n && map[x][y+1] == '@'){
-        find(x,y+1);
-    }
-    if(x + 1 < m && y - 1 >= 0 && map[x+1][y-1] == '@'){
-        find(x+1,y-1);
-    }
-    if(x - 1 >= 0 && y+1 < n && map[x-1][y+1] == '@'){
-        find(x-1,y+1);
-    }
-    if(x - 1 >= 0 && map[x-1][y] == '@'){
-        find(x-1,y);
-    }
-    if(x -1 >= 0 && y - 1 >= 0 && map[x-1][y-1] == '@'){
-        find(x-1,y-1);
-    }
-    if(y -1 >= 0 && map[x][y-1] == '@'){
-        find(x,y-1);
-    }
+    if(x + 1 < m && map[x+1][y] == '@') find(x+1,y);
+    if(x + 1 < m && y + 1 < n && map[x+1][y+1] == '@') find(x+1,y+1);
+    if(y+1<n && map[x][y+1] == '@') find(x,y+1);
+    if(x + 1 < m && y - 1 >= 0 && map[x+1][y-1] == '@') find(x+1,y-1);
+    if(x - 1 >= 0 && y+1 < n && map[x-1][y+1] == '@') find(x-1,y+1);
+    if(x - 1 >= 0 && map[x-1][y] == '@') find(x-1,y);
+    if(x -1 >= 0 && y - 1 >= 0 && map[x-1][y-1] == '@') find(x-1,y-1);
+    if(y -1 >= 0 && map[x][y-1] == '@') find(x,y-1);
 }
 
 int main(void){
