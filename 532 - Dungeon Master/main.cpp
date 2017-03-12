@@ -48,7 +48,7 @@ int dfs(coors S){
         for(int i = 0; i < 6; i++){
             neigh = conscoors(currn.x + dx[i], currn.y + dy[i], currn.z + dz[i]);
             if(isOnPlan(neigh) && M[neigh.x][neigh.y][neigh.z] != '#'){
-                bool wp = (dist[neigh.x][neigh.y][neigh.z] == 100000) ? true : false; // wp = will push
+                bool wp = (dist[neigh.x][neigh.y][neigh.z] == 100000) ? true : false;
                 dist[neigh.x][neigh.y][neigh.z] = min(dist[neigh.x][neigh.y][neigh.z], dist[currn.x][currn.y][currn.z] + 1);
                 if(M[neigh.x][neigh.y][neigh.z] == 'E') return dist[neigh.x][neigh.y][neigh.z];
                 if(wp) Q.push(neigh);
