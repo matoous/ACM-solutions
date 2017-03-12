@@ -69,9 +69,7 @@ int main(){
                 }
             }
         }
-        int d = dfs(S);
-        if(d == -1) cout << "Trapped!" << endl;
-        else cout << "Escaped in " << d << " minute(s)." << endl;
+        (dfs(S) == -1) ? printf("Trapped!\n") : printf("Escaped in %d minute(s).\n", d);
     }
     return 0;
 }
