@@ -1,6 +1,4 @@
 #include <cstdio>
-#include <deque>
-#include <map>
 #include <queue>
 #include <iostream>
 
@@ -22,7 +20,6 @@ int main(){
             bugs[a].push_back(b);
             bugs[b].push_back(a);
         }
-        total = 0;
         colors.resize(v, -1);
         bool bip = true;
         for(int i = 0; i < v && bip; i++){
