@@ -2,9 +2,10 @@
 #include<cstdio>
 #include <vector>
 #include <queue>
+
 using namespace std;
-queue<int> v1;
-queue<int> v2;
+
+queue<int> v1, v2;
 
 int main(){
     int t1, t2, n;
@@ -34,12 +35,10 @@ int main(){
                 s1 = s2 = 0;
             }
         }
-        while(!v1.empty()){
+        while(!v1.empty())
             s1 += v1.front(); v1.pop();
-        }
-        while(!v2.empty()){
+        while(!v2.empty())
             s2 += v2.front(); v2.pop();
-        }
         s += max(s1, s2);
         printf("%ld\n", s);
     }
