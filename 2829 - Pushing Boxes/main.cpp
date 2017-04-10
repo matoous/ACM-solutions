@@ -16,38 +16,22 @@ string s;
 
 struct {
     bool operator()(piic a, piic b)
-    {
-        if(a x == b x)
-            return a y < b y;
-        return a x < b x;
-    }
+        return a x == b x ? a y < b y : a x < b x;
 } byX;
 
 struct {
     bool operator()(piic a, piic b)
-    {
-        if(a x == b x)
-            return a y > b y;
-        return a x < b x;
-    }
+        return a x == b x ? a y > b y : a x < b x;
 } byXr;
 
 struct {
     bool operator()(piic a, piic b)
-    {
-        if(a y == b y)
-            return a x < b x;
-        return a y < b y;
-    }
+        return a y == b y ? a x < b x : a y < b y;
 } byY;
 
 struct {
     bool operator()(piic a, piic b)
-    {
-        if(a y == b y)
-            return a x > b x;
-        return a y < b y;
-    }
+        return a y == b y ? a x > b x : a y < b y;
 } byYr;
 
 void printBoxes(){
