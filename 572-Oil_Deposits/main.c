@@ -17,8 +17,7 @@ void find(int x, int y){
 }
 
 int main(void){
-    scanf("%d %d ", &m, &n);
-    while(m != 0){
+    while(scanf("%d %d ", &m, &n) && m != 0){
         map = (char**)malloc(m*sizeof(char*));
         for(int i = 0; i < m; i++){
             map[i]=(char*)calloc(n,sizeof(char));
@@ -38,7 +37,6 @@ int main(void){
             }
         }
         printf("%d\n",pockets);
-        scanf("%d %d ", &m, &n);
     }
     return 0;
 }
