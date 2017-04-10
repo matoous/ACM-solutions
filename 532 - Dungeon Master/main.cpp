@@ -6,9 +6,7 @@
 using namespace std;
 
 typedef struct{
-    int x;
-    int y;
-    int z;
+    int x, y, z;
 } coors;
 
 int L,R,C;
@@ -26,9 +24,8 @@ coors conscoors(int x, int y, int z){
     return a;
 }
 
-bool isOnPlan(coors a){
+bool isOnPlan(coors a)
     return (a.x >= L || a.x < 0 || a.y >= R || a.y < 0 || a.z >= C || a.z < 0) ? false : true;
-}
 
 int dfs(coors S){
     queue<coors> Q;
