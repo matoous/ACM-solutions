@@ -17,12 +17,12 @@ long outPut(vector<char> number){
 int main(){
     char c;
     vector<char> num, orig;
-    while(scanf("%c", &c) && (c-48) != 0) {
+    while(scanf("%c", &c) && (c - 48) != 0) {
         orig.push_back(c);
-        num.push_back((c-48 > 4)?(c-1):c);
+        num.push_back( c - 48 > 4 ? c - 1 : c);
         while(scanf("%c", &c) && c != '\n'){
             orig.push_back(c);
-            num.push_back((c-48 > 4)?(c-1):c);
+            num.push_back(c - 48 > 4 ? c - 1 :c);
         }
         for(int i = 0; i < orig.size(); i++) cout << orig[i];
         cout << ": " << outPut(num) << endl;
