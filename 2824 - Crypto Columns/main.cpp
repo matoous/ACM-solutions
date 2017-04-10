@@ -23,10 +23,10 @@ int main()
         }
         for(int i = 0; i < s.size()/key.size(); i++){
             for(int u = 0; u < key.size(); u++){
-                cout << dec[u][i];
+                printf("%c", dec[u][i]);
             }
         }
-        cout << endl;
+        printf("\n");
     }
     return 0;
 }
