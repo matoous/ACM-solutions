@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include "math.h"
+
 using namespace std;
 
 int main() {
@@ -8,11 +9,11 @@ int main() {
     scanf("%d", &iterations);
     for(int q = 0; q < iterations; q++){
         scanf("%d %d", &a, &b);
-        a = a%10;
+        a = a % 10;
         int out;
-        if(b == 0) cout << "1" << endl;
+        if(!b) cout << "1" << endl;
         else{
-            b = (b%4 == 0) ? (4) : (b%4);
+            b = !(b % 4) ? 4 : b % 4;
             out = a;
             for(int i = 1; i < b; i++){
                 out *= a;
