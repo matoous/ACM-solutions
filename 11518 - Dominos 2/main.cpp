@@ -30,9 +30,8 @@ int main(){
             kick(x-1);
         }
         int out = 0;
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < n; i++)
             if(!fresh[i]) out++;
-        }
         cout << out  << endl;
         fresh.clear();
         dominoes.clear();
