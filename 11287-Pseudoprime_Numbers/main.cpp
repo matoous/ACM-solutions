@@ -5,7 +5,7 @@ using namespace std;
 unsigned long long expoMod(unsigned long long a, unsigned long long b, unsigned long long m){
     unsigned long long result = 1;
     while (b){
-        if (b%2==1){
+        if (b % 2==1){
             result *= a;
             result %= m;
         }
