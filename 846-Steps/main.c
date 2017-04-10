@@ -4,17 +4,13 @@
 #define POS(x) ((x < 0) ? (-x) : (x))
 
 int main(int argc, char  *argv[]){
-    int k;
-    int m, n;
-    //TEST CASES
+    int k, m, n;
     scanf("%d", &k);
     for(int i = 0; i < k; i++){
         scanf("%d %d", &m, &n);
-        int dist = m - n;
-        dist = POS(dist);
-        int steps = 0;
-        int step = 1;
-        if(dist == 0){
+        int dist = POS(m - n);
+        int steps = 0, step = 1;
+        if(!dist){
             printf("0\n");
             continue;
         }
@@ -32,9 +28,7 @@ int main(int argc, char  *argv[]){
                 steps++;
             }
         }
-        if(dist != 0){
-            steps++;
-        }
+        if(dist != 0) steps++;
         printf("%d\n", steps);
     }
     return 0;
