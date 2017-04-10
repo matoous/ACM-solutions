@@ -11,9 +11,7 @@ short BFS(int x){
     for(int i = 0; i < arr_count[x]; i++){
         if(visited[arr[x][i]] == 1) visits++;
         if(visits == 2) return 0;
-        if(visited[arr[x][i]] == 0){
-            if(!BFS(arr[x][i])) return 0;
-        }
+        if(visited[arr[x][i]] == 0) if(!BFS(arr[x][i])) return 0;
     }
     return 1;
 }
@@ -45,11 +43,7 @@ int main(int argc, char  *argv[]){
             is_it = 0;
         }
     }
-    if(is_it == 1){
-        printf("YES\n");
-    } else{
-        printf("NO\n");
-    }
+    printf(is_it ? "YES\n" : "NO\n");
     free(arr_count);
     free(visited);
     for(int i = 0; i < n; i++){
