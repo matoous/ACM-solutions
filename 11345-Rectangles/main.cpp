@@ -2,14 +2,13 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+
 #define pii pair<int, int>
 
 using namespace std;
 
 int main(){
-    int iter, num;
-    int rx1,rx2,ry1,ry2;
-    int x1,x2,y1,y2;
+    int iter, num, rx1, rx2, ry1, ry2, x1, x2, y1, y2;;
     bool bad;
     scanf("%d", &iter);
     for(int t = 0; t < iter; t++){
