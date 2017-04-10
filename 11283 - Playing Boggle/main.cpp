@@ -25,9 +25,8 @@ int score(string s){
     return 0;
 }
 
-bool isOnField(int x, int y){
+bool isOnField(int x, int y)
     return (x < 0 || x >= 4 || y < 0 || y >= 4) ? false : true;
-}
 
 bool findLetter(int pos, int x, int y, vector<vector<bool> > visited){
     bool fl = false;
@@ -40,7 +39,7 @@ bool findLetter(int pos, int x, int y, vector<vector<bool> > visited){
                 fl = true;
                 break;
             }
-            else if(pos == sz -1) return true;
+            else if(pos == sz - 1) return true;
             visited[newx][newy] = false;
         }
     }
