@@ -13,8 +13,7 @@ bool fits(int l,int c,int r1,int r2){
 
 int main(){
     int l, c, r1, r2;
-    while(scanf("%d %d %d %d", &l, &c, &r1, &r2) &&  !(l==0 && c == 0 && r1 == 0 && r2 == 0)){
+    while(scanf("%d %d %d %d", &l, &c, &r1, &r2) &&  !(l==0 && c == 0 && r1 == 0 && r2 == 0))
         cout << fits(l,c,r1,r2) ? "S" : "N" << endl;
-    }
     return 0;
 }
