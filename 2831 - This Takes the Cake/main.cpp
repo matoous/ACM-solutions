@@ -9,18 +9,13 @@ using namespace std;
 pff a,b,c,d;
 double ta, now, pl;
 
-double sidesq(pff x, pff y){
-    pff vec = pff(y.first - x.first, y.second - x.second);
-    return vec.first*vec.first + vec.second*vec.second;
-}
-
 double side(pff x, pff y){
-    return sqrt(sidesq(x, y));
+    pff vec = pff(y.first - x.first, y.second - x.second);
+    return sqrt(vec.first*vec.first + vec.second*vec.second);
 }
 
-pff mid(pff x, pff y){
+pff mid(pff x, pff y)
     return pff((x.first+y.first)/2, (x.second+y.second)/2);
-}
 
 double area(pff x, pff y, pff z){
     double one = side(x, y);
@@ -30,17 +25,14 @@ double area(pff x, pff y, pff z){
     return sqrt(temp*(temp-one)*(temp-two)*(temp-three));
 }
 
-double absolute(double x){
+double absolute(double x)
     return (x < 0) ? -x : x;
-}
 
-double smaller(double x, double y){
+double smaller(double x, double y)
     return (x < y) ? x : y;
-}
 
-double bigger(double x, double y){
+double bigger(double x, double y)
     return x > y ? x : y;
-}
 
 int main(){
     int cake = 1;
