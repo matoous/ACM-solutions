@@ -4,6 +4,10 @@
 #include <queue>
 #include <limits>
 
+#define FROM .first.first
+#define TO .first.second
+#define COST .second
+
 using namespace std;
 
 typedef pair<int, int> pii;
@@ -13,18 +17,13 @@ bool loops(vector<pair<pii, int>> edges, int V){
     dist[0] = 0;
     for (int i = 0; i < V -1; i++){
         for (int u = 0; u < edges.size(); u++){
-            int b = edges[u].first.first;
-            int e = edges[u].first.second;
-            if (dist[b] + edges[u].second < dist[e]) {
-                dist[e] = dist[b] + edges[u].second;
+            if (dist[edges[u]FROM] + edges[u]COST < dist[edges[u]TO]) {
+                dist[edges[u]TO] = dist[edges[u]FROM] + edges[u]COST;
             }
         }
     }
-
     for (int i= 0; i < edges.size(); i++){
-        int b = edges[i].first.first;
-        int e = edges[i].first.second;
-        if (dist[b] + edges[i].second < dist[e]){
+        if (dist[edges[i]FROM] + edges[i]COST < dist[edges[i]TO]){
             return true;
         }
     }
