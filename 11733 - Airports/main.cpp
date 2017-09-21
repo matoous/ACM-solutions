@@ -35,6 +35,7 @@ int main() {
         sort(edges.begin(), edges.end());
         int total = airportCost * cities, airportCount = cities;
         for(auto e : edges){
+            if(e.Cost >= airportCost) break;
             if(!find(e.From, e.To)){
                 unite(e.From, e.To);
                 total = total - airportCost + e.Cost;
